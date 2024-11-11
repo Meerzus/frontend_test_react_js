@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './global.sass';
 import reportWebVitals from './reportWebVitals';
+import {RouterProvider} from "react-router-dom";
+import {router} from "./routes/routes";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={router} future={{v7_startTransition: true,}}/>
   </React.StrictMode>
 );
 

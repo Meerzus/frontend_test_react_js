@@ -1,0 +1,174 @@
+*, *:before, *:after
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  outline: none
+
+::-webkit-scrollbar
+  scrollbar-width: none
+  width: 0
+  height: 0
+
+html
+  font-size: 100%
+  scrollbar-width: none
+  overflow-x: hidden
+  min-height: 100svh
+  height: 100svh
+  min-width: 100svw
+  width: 100svw
+  scroll-behavior: smooth
+  background: #FAFAFA
+
+body
+  scrollbar-width: none
+  position: absolute
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  scroll-behavior: smooth
+  overflow-x: hidden
+  background: #FAFAFA
+  min-height: 100svh
+  min-width: 100svw
+
+.App
+  min-height: 100svh
+  min-width: 100svw
+  width: 100svw
+  height: 100svh
+  padding: 70px 24px 24px
+
+body, h1, h2, h3, h4, h5, h6, p
+  font-family: Roboto, sans-serif
+  margin: 0
+  padding: 0
+  color: #30353F
+
+h1
+  font-size: 4.210rem
+  margin: 3.158rem 0
+
+h2
+  font-size: 3.158rem
+  margin: 2.369rem 0
+
+h3
+  font-size: 2.369rem
+  margin: 1.777rem 0
+
+h4
+  font-size: 1.777rem
+  margin: 1.333rem 0
+
+h5
+  font-size: 1.333rem
+  margin: 0.750rem 0
+
+small
+  font-family: 'Inter', sans-serif
+  font-size: 0.750rem
+
+
+h1, h2, h3, h4, h5, h6
+  text-transform: uppercase
+  text-align: center
+  font-weight: 700
+
+input, select, textarea
+  width: 100%
+  height: 100%
+  border-radius: 5px
+
+input, select, option, textarea
+  font-family: 'Inter', sans-serif
+  padding: 12px 15px
+  color: #02102A
+  font-size: 14px
+  font-style: normal
+  font-weight: 700
+  line-height: 14px
+  border: none
+
+input[type="date"]
+  text-transform: uppercase
+
+button
+  border: none
+  background: transparent
+
+datalist
+  position: absolute
+  max-height: 20em
+  border: 0 none
+  overflow-x: hidden
+  overflow-y: auto
+
+datalist option
+  font-size: 0.8em
+  padding: 0.3em 1em
+  background-color: #ededed
+  cursor: pointer
+
+
+datalist option:hover, datalist option:focus
+  color: #F8F9FD
+  background-color: #036
+  outline: 0 none
+
+select:disabled
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  opacity: .5
+  background: #F8F9FD !important
+
+datalist::-webkit-calendar-picker-indicator
+  display: none
+  opacity: 0
+
+div[id*='Page']
+  display: flex
+  flex-direction: column
+  min-height: calc(100svh - 90px)
+  width: 100dvw
+  //border: 1px solid red
+  padding: 40px
+  margin-top: 90px
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+
+/* Firefox */
+input[type=number]
+  -moz-appearance: textfield
+
+.no-select
+  -webkit-user-select: none /* Chrome/Safari */
+  -moz-user-select: none /* Firefox */
+  -ms-user-select: none /* IE/Edge */
+  user-select: none /* Стандартный синтаксис */
+
+.toaster
+  width: 300px
+  height: 56px
+  li
+    width: 100%
+    height: 100%
+    padding: 18px
+    //background-color: $redBackground
+    //color: $red
+    gap: 8px
+    div[data-title]
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+//svg
+//  path
+//    fill: transparent
+//    stroke: $red
+
