@@ -1,9 +1,23 @@
-import React from 'react';
+import React from 'react'
+import './UserItem.sass'
 
-function UserItem() {
+const UserItem = ({user, deleteUser}) => {
     return (
-        <div></div>
-    );
+        <div className={'UserItem'}>
+            <p className={'USER'}>
+                <div>
+                    <img src={user.photo} alt=""/>
+                    <span>{user.name}</span>
+                    <button onClick={() => deleteUser(user.id)}>
+                        x
+                    </button>
+                </div>
+                <div>
+                    <p>{user.position}</p>
+                    <span>{user.project}</span>
+                </div>
+            </p>
+        </div>
+    )
 }
-
-export default UserItem;
+export default UserItem

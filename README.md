@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Тестовое задание: Список сотрудников завода
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+## Описание проекта
+### Проект представляет из себя веб-приложение для управления списком сотрудников завода. В приложении реализованы:
+- #### Отображение списка сотрудников
+- #### Форма добавления нового сотрудника
+- #### Настройки приложения (темная/светлая тема и выбор языка интерфейса)
 
-## Available Scripts
+### Весь код необходимо `исправить` и / или `оптимизировать`.
 
-In the project directory, you can run:
+---
+## Основные компоненты
 
-### `npm start`
+- #### `UserList.jsx` — список сотрудников, с возможностью фильтрации по проектам.
+######
+- #### `UserItem.jsx` — компонент, представляющий отдельного сотрудника, с кнопкой для удаления из списка.
+######
+- #### `UserForm.jsx` — форма для добавления сотрудника с валидацией полей.
+######
+- #### `AppSettings.jsx` — компонент с настройками, включает ThemeSwitcher и LanguageSwitcher. Должен отображать текущие настройки.
+######
+- #### `ThemeSwitcher.jsx` — компонент переключения светлой и темной тем.
+######
+- #### `LanguageSwitcher.jsx` — компонент выбора языка (русский / английский / итальянский).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### В `src/mock.js` находится пример списка сотрудников с полями:
 
-### `npm test`
+- `id` : `int`
+- `name` : `string`
+- `project` : `string`
+- `position` : `string`
+- `photo` : `string` **(необязательное поле)**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Проекты для фильтрации:
+- #### Автоматизация цеха
+- #### Модульные конструкции
+- #### Металлоконструкции
+- #### Эко-безопасность
+- #### Сборочные линии
 
-### `npm run build`
+### Доступные настройки
+- #### Темы: `светлая` и `темная`.
+- #### Языки: `русский`/`английский`/`итальянский`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+## Задача
+### Исполнителю необходимо:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Реализовать функционал работы `компонентов` и `стилизацию`.**
+######
+- **Реализовать фильтрацию списка сотрудников в `UserList` по полю *`"project"`*. Дополнительные фильтры по усмотрению исполнителя.**
+######
+- **Настроить `UserForm` с валидацией: все поля, кроме `photo`, обязательны. Поля `name`, `position` и `project` должны содержать только кириллицу. В случае ошибки уведомить пользователя о ней (можно использовать установленный `sonner` или любой другой тостер)**
+######
+- **Добавить переключение `тем` и `языка`.**
+######
+- **Убрать `"мусорный код"` (лишние console.log, ненужные div, нестабильные классы и пр.).**
+######
+### **От исполнителя требуется самостоятельно выбрать набор необходимых хуков для реализации задания**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+## Требования к окружению
+- `React.js`
+- `sass`
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Запуск проекта
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Скопируйте проект`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/Meerzus/frontend_test_react_js.git ./
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `Установите зависимости`
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `Запустите приложение`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

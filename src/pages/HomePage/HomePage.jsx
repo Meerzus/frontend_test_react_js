@@ -1,27 +1,50 @@
-import React, {useEffect, useState} from 'react';
-import './HomePage.sass'
+import React from 'react'
 import {mockUsers} from "../../mock";
+import './HomePage.sass'
+import UserList from "../../components/UserList/UserList";
+import UserForm from "../../components/UserForm/UserForm";
+import AppSettings from "../../components/AppSettings/AppSettings";
 
-function HomePage() {
-    const [users, setUsers] = useState([])
+const HomePage = () => {
+    let users = mockUsers;
 
-    useEffect(() => {
-        setUsers(mockUsers)
-    }, []);
+    const postNewUser = (newUser) => {
+        users.push(newUser);
+        console.log('postNewUser')
+    }
 
-    useEffect(() => {
-        if (users.length > 0) console.log(users)
-    }, [users]);
+    const deleteUser = (id) => {
+        users = users.filter((user) => user.id !== id);
+        console.log('deleteUser')
+    }
+
+    const sortUsers = (project) => {
+        users = users.filter((user) => user.project === project);
+        console.log('sortUsers')
+    }
+
+    console.log(users)
+
+    let theme = 'Светлая'
+
+    const setTheme = (newTheme) => {
+        theme = newTheme
+    }
+
+    let lang = 'Русский'
+
+    const changeLanguage = (newLanguage) => {
+        lang = newLanguage
+    }
 
     return (
         <div className={'page homePage'}>
-            {
-                users.length > 0
-                    ? users.map((user, i) => <img src={user.photo} alt="" key={i}/>)
-                    : null
-            }
+            <AppSettings theme={theme} setTheme={setTheme} lang={lang} changeLanguage={changeLanguage}/>
+            <h3>Сотрудники завода №52</h3>
+            <UserList users={users} deleteUser={deleteUser} sortUsers={sortUsers}/>
+            <UserForm postNewUser={postNewUser}/>
+            {console.log(mockUsers)}
         </div>
     );
 }
-
-export default HomePage;
+export default HomePage
