@@ -31,7 +31,6 @@ npm start
 
 ### 1. Форма добавления нового сотрудника:
    - **Поля:**
-     - `id` : `int`, обязательное поле
      - `name` : `string`, обязательное поле
      - `project` : `string`, обязательное поле
      - `position` : `string`, обязательное поле
@@ -73,7 +72,6 @@ npm start
 
 ### В `src/mock.js` находится пример списка сотрудников с полями:
 
-- `id` : `int`
 - `name` : `string`
 - `project` : `string`
 - `position` : `string`

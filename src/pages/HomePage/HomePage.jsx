@@ -13,8 +13,8 @@ const HomePage = () => {
         console.log('postNewUser')
     }
 
-    const deleteUser = (id) => {
-        users = users.filter((user) => user.id !== id);
+    const deleteUser = (name) => {
+        users = users.filter((user) => user.name !== name);
         console.log('deleteUser')
     }
 

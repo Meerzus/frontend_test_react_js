@@ -2,7 +2,6 @@ import React from 'react'
 import './UserForm.sass'
 
 const UserForm = ({postNewUser}) => {
-    let id = ''
     let name = ''
     let project = ''
     let position = ''
@@ -11,8 +10,6 @@ const UserForm = ({postNewUser}) => {
     return (
         <div className={'userform'}>
             <h4>Создание пользователя</h4>
-            <span>ID</span>
-            <input type="text" className={'id'} value={id} onChange={e => id = id + e.target.value} placeholder={'ID'}/>
             <span>Имя</span>
             <input type="text" className={'name'} value={name} onChange={e => name = name + e.target.value} placeholder={'Имя'}/>
             <span>Проект</span>
@@ -23,7 +20,6 @@ const UserForm = ({postNewUser}) => {
             <input type="text" id={'photo'} value={photo} onChange={e => photo = photo + e.target.value} placeholder={'Фото (необязательно)'}/>
 
             <button onClick={() => postNewUser({
-                id: id,
                 name: name,
                 project: project,
                 position: position,
