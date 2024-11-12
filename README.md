@@ -95,7 +95,6 @@ npm start
 ### 1. Стек технологий:
    - `React.js`
    - `React Router`
-   - `LocalStorage`
    - `sass`
 
 ### 2. Организация кода:
