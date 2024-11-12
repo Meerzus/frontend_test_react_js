@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95823f48-30e5-4d5a-9809-63c6ee798489" name="Changes" comment="fixed README.md" />
+    <list default="true" id="95823f48-30e5-4d5a-9809-63c6ee798489" name="Changes" comment="fixed README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +66,7 @@
       <updated>1731323791486</updated>
       <workItem from="1731323792527" duration="5712000" />
       <workItem from="1731383636324" duration="3236000" />
+      <workItem from="1731389725059" duration="1410000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -153,7 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731389677222</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fixed README.md">
+      <option name="closed" value="true" />
+      <created>1731389857795</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731389857795</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fixed README.md">
+      <option name="closed" value="true" />
+      <created>1731389974073</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731389974073</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
